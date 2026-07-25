@@ -25,11 +25,11 @@ class Settings(BaseSettings):
 
     # CORS
     CORS_ORIGINS: List[str] = ["https://game-frontend-rho-smoky.vercel.app", "http://localhost:5173", "http://localhost:3000"]
-CORS_ORIGIN_REGEX: str = r"^https://game-frontend-rho-smoky\.vercel\.app$"
+    CORS_ORIGIN_REGEX: str = r"^https://game-frontend-rho-smoky\.vercel\.app$"
 
     # Wallet / business rules
-    MIN_DEPOSIT_PAISE: int = 5000          # ₹50.00 minimum deposit
-    MAX_DEPOSIT_PAISE: int = 10000000      # ₹1,00,000 max single deposit (anti-fraud guard)
+    MIN_DEPOSIT_PAISE: int = 5000          # Rs 50.00 minimum deposit
+    MAX_DEPOSIT_PAISE: int = 10000000      # Rs 1,00,000 max single deposit (anti-fraud guard)
     MIN_AGE_YEARS: int = 18
 
     # Simulated payment gateway (swap for Razorpay/Cashfree in production)
