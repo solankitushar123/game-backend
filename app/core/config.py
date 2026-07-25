@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     ENV: str = "development"
 
     # Database
-    DATABASE_URL: str = "mysql+pymysql://root:root@localhost:3306/gamejackpot"
+    DATABASE_URL: str = "sqlite:///./app.db"
 
     # Redis
     REDIS_URL: str = "redis://localhost:6379/0"
@@ -24,10 +24,8 @@ class Settings(BaseSettings):
     REFRESH_TOKEN_EXPIRE_DAYS: int = 14
 
     # CORS
-    CORS_ORIGINS: List[str] = ["https://game-frontend-3bsrgb2qy-tejasvi-solankis-projects.vercel.app","http://localhost:5173", "http://localhost:3000"]
-    # Matches ANY Vercel preview deployment for this project too (they get a new random
-    # hash every deploy, e.g. game-frontend-<hash>-tejasvi-solankis-projects.vercel.app)
-    CORS_ORIGIN_REGEX: str = r"^https://game-frontend(-[a-z0-9]+)?-tejasvi-solankis-projects\.vercel\.app$"
+    CORS_ORIGINS: List[str] = ["https://game-frontend-rho-smoky.vercel.app", "http://localhost:5173", "http://localhost:3000"]
+CORS_ORIGIN_REGEX: str = r"^https://game-frontend-rho-smoky\.vercel\.app$"
 
     # Wallet / business rules
     MIN_DEPOSIT_PAISE: int = 5000          # ₹50.00 minimum deposit
